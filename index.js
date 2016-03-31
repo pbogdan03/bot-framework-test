@@ -41,6 +41,6 @@ server.use(txtBot.verifyBotFramework({
 	appSecret: process.env.APPSECRET
 }));
 server.post('/api/messages', txtBot.listen());
-server.listen(process.env.port || 8080, function() {
-	console.log('%s listening to %s', server.name, server.url);
+server.listen(process.env.PORT || 8080, function() {
+	console.log('server listening to %s', server.port);
 });
