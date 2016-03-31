@@ -2,7 +2,11 @@
 
 var restify = require('restify');
 var BotBuilder = require('botbuilder');
-var env = require('dotenv').config();
+try {
+	var env = require('dotenv').config();
+} catch(err) {
+	
+}
 
 // Create a text bot that takes your name and responds using that name
 var txtBot = new BotBuilder.BotConnectorBot();
