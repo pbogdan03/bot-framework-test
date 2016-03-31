@@ -2,11 +2,12 @@
 
 var restify = require('restify');
 var BotBuilder = require('botbuilder');
+var env = require('dotenv').config();
 
 // Create bot and add dialogs
 var bot = new BotBuilder.BotConnectorBot({
-	appId: 'YourAppId',
-	appSecret: 'YourAppSecret'
+	appId: process.env.APPID,
+	appSecret: process.env.APPSECRET
 });
 
 bot.add('/', function(session) {
